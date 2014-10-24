@@ -28252,15 +28252,15 @@ tailrecursion.hoplon.app_pages._index_DOT_html.hoploninit = function hoploninit(
   };
   tailrecursion.hoplon.app_pages._index_DOT_html.goog_analytics = function() {
     var goog_analytics__delegate = function(args__8614__auto__) {
-      var vec__16452 = tailrecursion.hoplon.parse_args.call(null, args__8614__auto__);
-      var account_id = cljs.core.nth.call(null, vec__16452, 0, null);
+      var vec__17451 = tailrecursion.hoplon.parse_args.call(null, args__8614__auto__);
+      var account_id = cljs.core.nth.call(null, vec__17451, 0, null);
       return tailrecursion.hoplon.script.call(null, new cljs.core.Keyword(null, "type", "type", 1017479852), "text/javascript", function() {
         var t__8639__auto__ = document.createTextNode("");
-        tailrecursion.javelin.lift.call(null, function(t__8639__auto__, vec__16452, account_id) {
-          return function(G__16453, G__16454) {
-            return G__16453.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1("var _gaq \x3d _gaq || []; _gaq.push(['_setAccount', '" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__16454) + "']); _gaq.push(['_trackPageview']); (function() { var ga \x3d document.createElement('script'); ga.type \x3d 'text/javascript'; ga.async \x3d true; ga.src \x3d ('https:' \x3d\x3d document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s \x3d document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();");
+        tailrecursion.javelin.lift.call(null, function(t__8639__auto__, vec__17451, account_id) {
+          return function(G__17452, G__17453) {
+            return G__17452.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1("var _gaq \x3d _gaq || []; _gaq.push(['_setAccount', '" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__17453) + "']); _gaq.push(['_trackPageview']); (function() { var ga \x3d document.createElement('script'); ga.type \x3d 'text/javascript'; ga.async \x3d true; ga.src \x3d ('https:' \x3d\x3d document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s \x3d document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();");
           };
-        }(t__8639__auto__, vec__16452, account_id)).call(null, t__8639__auto__, account_id);
+        }(t__8639__auto__, vec__17451, account_id)).call(null, t__8639__auto__, account_id);
         return t__8639__auto__;
       }());
     };
@@ -28272,8 +28272,8 @@ tailrecursion.hoplon.app_pages._index_DOT_html.hoploninit = function hoploninit(
       return goog_analytics__delegate.call(this, args__8614__auto__);
     };
     goog_analytics.cljs$lang$maxFixedArity = 0;
-    goog_analytics.cljs$lang$applyTo = function(arglist__16542) {
-      var args__8614__auto__ = cljs.core.seq(arglist__16542);
+    goog_analytics.cljs$lang$applyTo = function(arglist__17541) {
+      var args__8614__auto__ = cljs.core.seq(arglist__17541);
       return goog_analytics__delegate(args__8614__auto__);
     };
     goog_analytics.cljs$core$IFn$_invoke$arity$variadic = goog_analytics__delegate;
@@ -28285,58 +28285,58 @@ tailrecursion.hoplon.app_pages._index_DOT_html.hoploninit = function hoploninit(
   tailrecursion.hoplon.app_pages._index_DOT_html.url_to_go_to = tailrecursion.javelin.cell.call(null, "http://example.com/submitlink");
   tailrecursion.hoplon.app_pages._index_DOT_html.url_field_name = tailrecursion.javelin.cell.call(null, "url");
   tailrecursion.hoplon.app_pages._index_DOT_html.url_field_value = tailrecursion.javelin.cell.call(null, "document-location");
-  tailrecursion.hoplon.app_pages._index_DOT_html.url_field_value_out = tailrecursion.javelin.lift.call(null, function(G__16458, G__16459, G__16460) {
-    var pred__16455 = G__16458;
-    var expr__16456 = G__16459;
-    if (cljs.core.truth_(pred__16455.call(null, "document-location", expr__16456))) {
+  tailrecursion.hoplon.app_pages._index_DOT_html.url_field_value_out = tailrecursion.javelin.lift.call(null, function(G__17457, G__17458, G__17459) {
+    var pred__17454 = G__17457;
+    var expr__17455 = G__17458;
+    if (cljs.core.truth_(pred__17454.call(null, "document-location", expr__17455))) {
       return "encodeURIComponent(document.location.toString().trim())";
     } else {
-      throw new G__16460("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__16456));
+      throw new G__17459("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__17455));
     }
   }).call(null, cljs.core._EQ_, tailrecursion.hoplon.app_pages._index_DOT_html.url_field_value, Error);
   tailrecursion.hoplon.app_pages._index_DOT_html.title_field_name = tailrecursion.javelin.cell.call(null, "title");
   tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value = tailrecursion.javelin.cell.call(null, "document-title");
-  tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value_out = tailrecursion.javelin.lift.call(null, function(G__16464, G__16465, G__16466) {
-    var pred__16461 = G__16464;
-    var expr__16462 = G__16465;
-    if (cljs.core.truth_(pred__16461.call(null, "document-title", expr__16462))) {
+  tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value_out = tailrecursion.javelin.lift.call(null, function(G__17463, G__17464, G__17465) {
+    var pred__17460 = G__17463;
+    var expr__17461 = G__17464;
+    if (cljs.core.truth_(pred__17460.call(null, "document-title", expr__17461))) {
       return "encodeURIComponent(document.title.trim())";
     } else {
-      throw new G__16466("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__16462));
+      throw new G__17465("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__17461));
     }
   }).call(null, cljs.core._EQ_, tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value, Error);
   tailrecursion.hoplon.app_pages._index_DOT_html.encode_for_query = function encode_for_query(s) {
     return encodeURIComponent(s.toString().trim());
   };
   tailrecursion.hoplon.app_pages._index_DOT_html.cond_type = function cond_type(cell, a, b, c) {
-    var pred__16470 = cljs.core._EQ_;
-    var expr__16471 = cell;
-    if (cljs.core.truth_(pred__16470.call(null, "go-to-address", expr__16471))) {
+    var pred__17469 = cljs.core._EQ_;
+    var expr__17470 = cell;
+    if (cljs.core.truth_(pred__17469.call(null, "go-to-address", expr__17470))) {
       return a;
     } else {
-      if (cljs.core.truth_(pred__16470.call(null, "get-url", expr__16471))) {
+      if (cljs.core.truth_(pred__17469.call(null, "get-url", expr__17470))) {
         return b;
       } else {
-        if (cljs.core.truth_(pred__16470.call(null, "post-url", expr__16471))) {
+        if (cljs.core.truth_(pred__17469.call(null, "post-url", expr__17470))) {
           return c;
         } else {
-          throw new Error("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__16471));
+          throw new Error("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(expr__17470));
         }
       }
     }
   };
-  tailrecursion.hoplon.app_pages._index_DOT_html.url_field_text = tailrecursion.javelin.lift.call(null, function(G__16474, G__16473) {
-    return G__16473.call(null, G__16474, "URL to go to:", "URL to GET:", "URL to POST to:");
+  tailrecursion.hoplon.app_pages._index_DOT_html.url_field_text = tailrecursion.javelin.lift.call(null, function(G__17473, G__17472) {
+    return G__17472.call(null, G__17473, "URL to go to:", "URL to GET:", "URL to POST to:");
   }).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.current_bookmarklet_type, tailrecursion.hoplon.app_pages._index_DOT_html.cond_type);
   tailrecursion.hoplon.app_pages._index_DOT_html.go_to_url_bookmarklet = function go_to_url_bookmarklet() {
     return "javascript:window.location\x3d%22" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_to_go_to)) + "?" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_field_name)) + "\x3d%22+" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_field_value_out)) + "+%22\x26" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
     tailrecursion.hoplon.app_pages._index_DOT_html.title_field_name)) + "\x3d%22+" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value_out));
   };
-  tailrecursion.hoplon.app_pages._index_DOT_html.input_cells = tailrecursion.javelin.lift.call(null, function(G__16475, G__16476, G__16478, G__16477, G__16479) {
-    return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__16475, G__16476, G__16477, G__16478, G__16479], null);
+  tailrecursion.hoplon.app_pages._index_DOT_html.input_cells = tailrecursion.javelin.lift.call(null, function(G__17474, G__17475, G__17477, G__17476, G__17478) {
+    return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__17474, G__17475, G__17476, G__17477, G__17478], null);
   }).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_to_go_to, tailrecursion.hoplon.app_pages._index_DOT_html.url_field_name, tailrecursion.hoplon.app_pages._index_DOT_html.title_field_name, tailrecursion.hoplon.app_pages._index_DOT_html.url_field_value_out, tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value_out);
-  tailrecursion.hoplon.app_pages._index_DOT_html.output_str = tailrecursion.javelin.lift.call(null, function(G__16483, G__16482, G__16481, G__16480) {
-    return G__16480.call(null, G__16481, G__16482.call(null, G__16483), "", "");
+  tailrecursion.hoplon.app_pages._index_DOT_html.output_str = tailrecursion.javelin.lift.call(null, function(G__17482, G__17481, G__17480, G__17479) {
+    return G__17479.call(null, G__17480, G__17481.call(null, G__17482), "", "");
   }).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.input_cells, tailrecursion.hoplon.app_pages._index_DOT_html.go_to_url_bookmarklet, tailrecursion.hoplon.app_pages._index_DOT_html.current_bookmarklet_type, tailrecursion.hoplon.app_pages._index_DOT_html.cond_type);
   tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell = function text_input_cell(id, label_text, cell) {
     var setter_fn = function() {
@@ -28345,32 +28345,32 @@ tailrecursion.hoplon.app_pages._index_DOT_html.hoploninit = function hoploninit(
     return tailrecursion.hoplon.p.call(null, tailrecursion.hoplon.label.call(null, new cljs.core.Keyword(null, "name", "name", 1017277949), id, function() {
       var t__8639__auto__ = document.createTextNode("");
       tailrecursion.javelin.lift.call(null, function(t__8639__auto__, setter_fn) {
-        return function(G__16487, G__16486) {
-          return G__16486.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__16487);
+        return function(G__17486, G__17485) {
+          return G__17485.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__17486);
         };
       }(t__8639__auto__, setter_fn)).call(null, label_text, t__8639__auto__);
       return t__8639__auto__;
     }()), tailrecursion.hoplon.input.call(null, new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "name", "name", 1017277949), id, new cljs.core.Keyword(null, "id", "id", 1013907597), id, new cljs.core.Keyword(null, "value", "value", 1125876963), cell, new cljs.core.Keyword(null, "change", "change", 3947235106), setter_fn, new cljs.core.Keyword(null, "keyup", "keyup", 1115849900), setter_fn));
   };
-  tailrecursion.hoplon.app_pages._index_DOT_html.radio_cell = function radio_cell(p__16488) {
-    var vec__16492 = p__16488;
-    var name = cljs.core.nth.call(null, vec__16492, 0, null);
-    var id = cljs.core.nth.call(null, vec__16492, 1, null);
-    var label = cljs.core.nth.call(null, vec__16492, 2, null);
-    var cell = cljs.core.nth.call(null, vec__16492, 3, null);
-    var opts = cljs.core.nth.call(null, vec__16492, 4, null);
+  tailrecursion.hoplon.app_pages._index_DOT_html.radio_cell = function radio_cell(p__17487) {
+    var vec__17491 = p__17487;
+    var name = cljs.core.nth.call(null, vec__17491, 0, null);
+    var id = cljs.core.nth.call(null, vec__17491, 1, null);
+    var label = cljs.core.nth.call(null, vec__17491, 2, null);
+    var cell = cljs.core.nth.call(null, vec__17491, 3, null);
+    var opts = cljs.core.nth.call(null, vec__17491, 4, null);
     tailrecursion.hoplon.app_pages._index_DOT_html.log.call(null, (new cljs.core.Keyword(null, "checked", "checked", 1756218137)).cljs$core$IFn$_invoke$arity$1(opts));
-    return tailrecursion.hoplon.p.call(null, tailrecursion.hoplon.input.call(null, new cljs.core.Keyword(null, "type", "type", 1017479852), "radio", new cljs.core.Keyword(null, "name", "name", 1017277949), name, new cljs.core.Keyword(null, "id", "id", 1013907597), id, new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(vec__16492, name, id, label, cell, opts) {
+    return tailrecursion.hoplon.p.call(null, tailrecursion.hoplon.input.call(null, new cljs.core.Keyword(null, "type", "type", 1017479852), "radio", new cljs.core.Keyword(null, "name", "name", 1017277949), name, new cljs.core.Keyword(null, "id", "id", 1013907597), id, new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(vec__17491, name, id, label, cell, opts) {
       return function() {
         return cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.current_bookmarklet_type, id);
       };
-    }(vec__16492, name, id, label, cell, opts), new cljs.core.Keyword(null, "checked", "checked", 1756218137), (new cljs.core.Keyword(null, "checked", "checked", 1756218137)).cljs$core$IFn$_invoke$arity$1(opts), new cljs.core.Keyword(null, "disabled", "disabled", 1284845038), (new cljs.core.Keyword(null, "disabled", "disabled", 1284845038)).cljs$core$IFn$_invoke$arity$1(opts)), function() {
+    }(vec__17491, name, id, label, cell, opts), new cljs.core.Keyword(null, "checked", "checked", 1756218137), (new cljs.core.Keyword(null, "checked", "checked", 1756218137)).cljs$core$IFn$_invoke$arity$1(opts), new cljs.core.Keyword(null, "disabled", "disabled", 1284845038), (new cljs.core.Keyword(null, "disabled", "disabled", 1284845038)).cljs$core$IFn$_invoke$arity$1(opts)), function() {
       var t__8639__auto__ = document.createTextNode("");
-      tailrecursion.javelin.lift.call(null, function(t__8639__auto__, vec__16492, name, id, label, cell, opts) {
-        return function(G__16493, G__16494) {
-          return G__16493.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__16494);
+      tailrecursion.javelin.lift.call(null, function(t__8639__auto__, vec__17491, name, id, label, cell, opts) {
+        return function(G__17492, G__17493) {
+          return G__17492.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__17493);
         };
-      }(t__8639__auto__, vec__16492, name, id, label, cell, opts)).call(null, t__8639__auto__, label);
+      }(t__8639__auto__, vec__17491, name, id, label, cell, opts)).call(null, t__8639__auto__, label);
       return t__8639__auto__;
     }());
   };
@@ -28380,103 +28380,103 @@ tailrecursion.hoplon.app_pages._index_DOT_html.hoploninit = function hoploninit(
     "width\x3ddevice-width, initial-scale\x3d1"), tailrecursion.hoplon.title.call(null, "bookmarkleteer - Matt Gauger's bookmarklet maker"), tailrecursion.hoplon.link.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), "css/normalize.css", new cljs.core.Keyword(null, "rel", "rel", 1014017035), "stylesheet"), tailrecursion.hoplon.link.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), "css/layout.css", new cljs.core.Keyword(null, "rel", "rel", 1014017035), "stylesheet")], 
     null);
   }()), tailrecursion.hoplon.html_body.call(null, cljs.core.PersistentArrayMap.EMPTY, function() {
-    var G__16497 = tailrecursion.hoplon.h1.call(null, document.createTextNode("bookmarkleteer"));
-    var G__16499 = tailrecursion.hoplon.p.call(null, document.createTextNode("This is a simple generator for bookmarklets that take the current URL and either prefill a form, or do an AJAX GET or POST to a remote server."));
-    var G__16498 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__16499);
-    var G__16508 = tailrecursion.hoplon.p.call(null, document.createTextNode("Examples of such bookmarklets are the Instapaper and Tumblr bookmarklets (although both have gotten much more complex over the years.)"));
-    var G__16507 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__16508);
-    var G__16496 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__16497, G__16498, G__16507);
-    var G__16503 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "bookmarklet-title", "Bookmarklet title:", tailrecursion.hoplon.app_pages._index_DOT_html.bookmarklet_title);
-    var G__16502 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__16503, function() {
+    var G__17496 = tailrecursion.hoplon.h1.call(null, document.createTextNode("bookmarkleteer"));
+    var G__17498 = tailrecursion.hoplon.p.call(null, document.createTextNode("This is a simple generator for bookmarklets that take the current URL and either prefill a form, or do an AJAX GET or POST to a remote server."));
+    var G__17497 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__17498);
+    var G__17507 = tailrecursion.hoplon.p.call(null, document.createTextNode("Examples of such bookmarklets are the Instapaper and Tumblr bookmarklets (although both have gotten much more complex over the years.)"));
+    var G__17506 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__17507);
+    var G__17495 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__17496, G__17497, G__17506);
+    var G__17502 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "bookmarklet-title", "Bookmarklet title:", tailrecursion.hoplon.app_pages._index_DOT_html.bookmarklet_title);
+    var G__17501 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__17502, function() {
       var name = "type-of-bookmarklet";
       var cell = tailrecursion.hoplon.app_pages._index_DOT_html.current_bookmarklet_type;
       return tailrecursion.hoplon.p.call(null, tailrecursion.hoplon.label.call(null, new cljs.core.Keyword(null, "name", "name", 1017277949), name, document.createTextNode("Type of bookmarklet")), cljs.core.map.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.radio_cell, new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [name, "go-to-address", "Go to address with query params (pre-fill a form)", 
       cell, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "checked", "checked", 1756218137), true], null)], null), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [name, "get-url", "AJAX GET a URL", cell, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "disabled", "disabled", 1284845038), true], null)], null), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [name, "post-url", "AJAX POST to a URL", 
       cell, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "disabled", "disabled", 1284845038), true], null)], null), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [name, "load-js-and-run-function", "Load a JS file and run a function", cell, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "disabled", "disabled", 1284845038), true], null)], null)], null)));
     }());
-    var G__16505 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "url-to-go-to", tailrecursion.hoplon.app_pages._index_DOT_html.url_field_text, tailrecursion.hoplon.app_pages._index_DOT_html.url_to_go_to);
-    var G__16506 = tailrecursion.hoplon.h2.call(null, document.createTextNode("Fields to send"));
-    var G__16512 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "input-url-field-name", "URL field:", tailrecursion.hoplon.app_pages._index_DOT_html.url_field_name);
-    var G__16513 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "input-title-field-name", "Title field:", tailrecursion.hoplon.app_pages._index_DOT_html.title_field_name);
-    var G__16504 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__16505, G__16506, G__16512, function() {
+    var G__17504 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "url-to-go-to", tailrecursion.hoplon.app_pages._index_DOT_html.url_field_text, tailrecursion.hoplon.app_pages._index_DOT_html.url_to_go_to);
+    var G__17505 = tailrecursion.hoplon.h2.call(null, document.createTextNode("Fields to send"));
+    var G__17511 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "input-url-field-name", "URL field:", tailrecursion.hoplon.app_pages._index_DOT_html.url_field_name);
+    var G__17512 = tailrecursion.hoplon.app_pages._index_DOT_html.text_input_cell.call(null, "input-title-field-name", "Title field:", tailrecursion.hoplon.app_pages._index_DOT_html.title_field_name);
+    var G__17503 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__17504, G__17505, G__17511, function() {
       var name = "input-url-field-value";
       return tailrecursion.hoplon.p.call(null, tailrecursion.hoplon.label.call(null, new cljs.core.Keyword(null, "name", "name", 1017277949), name, "URL field value:"), cljs.core.map.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.radio_cell, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [name, "document-location", "document.location", tailrecursion.hoplon.app_pages._index_DOT_html.url_field_value, 
       new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "checked", "checked", 1756218137), true], null)], null)], null)));
-    }(), G__16513, function() {
+    }(), G__17512, function() {
       var name = "input-title-field-value";
       return tailrecursion.hoplon.p.call(null, tailrecursion.hoplon.label.call(null, new cljs.core.Keyword(null, "name", "name", 1017277949), name, "Title field value:"), cljs.core.map.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.radio_cell, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [name, "document-title", "document.title", tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value, 
       new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "checked", "checked", 1756218137), true], null)], null), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [name, "string", "Free text (string)", tailrecursion.hoplon.app_pages._index_DOT_html.title_field_value, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "disabled", "disabled", 1284845038), true], null)], null)], null)));
     }());
-    var G__16501 = tailrecursion.hoplon.fieldset.call(null, G__16502, G__16504);
-    var G__16500 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__16501);
-    var G__16511 = tailrecursion.hoplon.h2.call(null, document.createTextNode("Output:"));
-    var G__16510 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full", G__16511);
-    var G__16509 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__16510);
-    var G__16516 = tailrecursion.hoplon.p.call(null, document.createTextNode("Create a bookmark and set its location to this:"));
-    var G__16517 = tailrecursion.hoplon.textarea.call(null, new cljs.core.Keyword(null, "value", "value", 1125876963), tailrecursion.hoplon.app_pages._index_DOT_html.output_str, new cljs.core.Keyword(null, "rows", "rows", 1017410891), 7, new cljs.core.Keyword(null, "cols", "cols", 1016963685), 45);
-    var G__16515 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__16516, G__16517);
-    var G__16518 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half");
-    var G__16524 = tailrecursion.hoplon.a.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), tailrecursion.hoplon.app_pages._index_DOT_html.output_str, new cljs.core.Keyword(null, "class", "class", 1108647146), "bookmarklet-button", function() {
+    var G__17500 = tailrecursion.hoplon.fieldset.call(null, G__17501, G__17503);
+    var G__17499 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__17500);
+    var G__17510 = tailrecursion.hoplon.h2.call(null, document.createTextNode("Output:"));
+    var G__17509 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full", G__17510);
+    var G__17508 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__17509);
+    var G__17515 = tailrecursion.hoplon.p.call(null, document.createTextNode("Create a bookmark and set its location to this:"));
+    var G__17516 = tailrecursion.hoplon.textarea.call(null, new cljs.core.Keyword(null, "value", "value", 1125876963), tailrecursion.hoplon.app_pages._index_DOT_html.output_str, new cljs.core.Keyword(null, "rows", "rows", 1017410891), 7, new cljs.core.Keyword(null, "cols", "cols", 1016963685), 45);
+    var G__17514 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half", G__17515, G__17516);
+    var G__17517 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column half");
+    var G__17523 = tailrecursion.hoplon.a.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), tailrecursion.hoplon.app_pages._index_DOT_html.output_str, new cljs.core.Keyword(null, "class", "class", 1108647146), "bookmarklet-button", function() {
       var t__8639__auto__ = document.createTextNode("");
-      tailrecursion.javelin.lift.call(null, function(t__8639__auto__, G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518) {
-        return function(G__16536, G__16535) {
-          return G__16535.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__16536);
+      tailrecursion.javelin.lift.call(null, function(t__8639__auto__, G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517) {
+        return function(G__17535, G__17534) {
+          return G__17534.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__17535);
         };
-      }(t__8639__auto__, G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518)).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.bookmarklet_title, t__8639__auto__);
+      }(t__8639__auto__, G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517)).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.bookmarklet_title, t__8639__auto__);
       return t__8639__auto__;
     }());
-    var G__16523 = tailrecursion.hoplon.p.call(null, document.createTextNode("Or, drag this button "), G__16524, document.createTextNode(" to your bookmarklets bar."));
-    var G__16514 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__16515, G__16518, G__16523);
-    var G__16521 = tailrecursion.hoplon.p.call(null, document.createTextNode("Character count: "), function() {
+    var G__17522 = tailrecursion.hoplon.p.call(null, document.createTextNode("Or, drag this button "), G__17523, document.createTextNode(" to your bookmarklets bar."));
+    var G__17513 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__17514, G__17517, G__17522);
+    var G__17520 = tailrecursion.hoplon.p.call(null, document.createTextNode("Character count: "), function() {
       var t__8639__auto__ = document.createTextNode("");
-      tailrecursion.javelin.lift.call(null, function(t__8639__auto__, G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514) {
-        return function(G__16538, G__16537) {
-          return G__16537.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__16538.length);
+      tailrecursion.javelin.lift.call(null, function(t__8639__auto__, G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513) {
+        return function(G__17537, G__17536) {
+          return G__17536.nodeValue = "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__17537.length);
         };
-      }(t__8639__auto__, G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514)).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.output_str, t__8639__auto__);
+      }(t__8639__auto__, G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513)).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.output_str, t__8639__auto__);
       return t__8639__auto__;
     }());
-    var G__16520 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full", G__16521);
-    var G__16522 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full warnings", new cljs.core.Keyword(null, "do-toggle", "do-toggle", 1250159176), tailrecursion.javelin.lift.call(null, function(G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514, 
-    G__16521, G__16520) {
-      return function(G__16539) {
-        return G__16539.length > 510;
+    var G__17519 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full", G__17520);
+    var G__17521 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full warnings", new cljs.core.Keyword(null, "do-toggle", "do-toggle", 1250159176), tailrecursion.javelin.lift.call(null, function(G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513, 
+    G__17520, G__17519) {
+      return function(G__17538) {
+        return G__17538.length > 510;
       };
-    }(G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514, G__16521, G__16520)).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.output_str), document.createTextNode("Warning: Bookmarklets longer than 510 characters may not work in IE6. Then again, if you're targeting IE6, good luck."));
-    var G__16519 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__16520, G__16522);
-    var G__16527 = tailrecursion.hoplon.h2.call(null, document.createTextNode("Exampless"));
-    var G__16531 = tailrecursion.hoplon.a.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), "#", new cljs.core.Keyword(null, "click", "click", 1108654330), function(G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514, G__16521, G__16520, G__16522, G__16519, G__16527) {
+    }(G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513, G__17520, G__17519)).call(null, tailrecursion.hoplon.app_pages._index_DOT_html.output_str), document.createTextNode("Warning: Bookmarklets longer than 510 characters may not work in IE6. Then again, if you're targeting IE6, good luck."));
+    var G__17518 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__17519, G__17521);
+    var G__17526 = tailrecursion.hoplon.h2.call(null, document.createTextNode("Exaamples"));
+    var G__17530 = tailrecursion.hoplon.a.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), "#", new cljs.core.Keyword(null, "click", "click", 1108654330), function(G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513, G__17520, G__17519, G__17521, G__17518, G__17526) {
       return function() {
         cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.bookmarklet_title, "Post to Awesome");
         cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_to_go_to, "http://awesome.bendyworks.com/submitlink");
         cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_field_name, "u");
         return cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.title_field_name, "t");
       };
-    }(G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514, G__16521, G__16520, G__16522, G__16519, G__16527), "awesome.bendyworks.com");
-    var G__16530 = tailrecursion.hoplon.span.call(null, G__16531, document.createTextNode(" (Hacker News-style)"));
-    var G__16529 = tailrecursion.hoplon.li.call(null, G__16530);
-    var G__16534 = tailrecursion.hoplon.a.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), "#", new cljs.core.Keyword(null, "click", "click", 1108654330), function(G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514, G__16521, G__16520, G__16522, G__16519, G__16527, G__16531, G__16530, 
-    G__16529) {
+    }(G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513, G__17520, G__17519, G__17521, G__17518, G__17526), "awesome.bendyworks.com");
+    var G__17529 = tailrecursion.hoplon.span.call(null, G__17530, document.createTextNode(" (Hacker News-style)"));
+    var G__17528 = tailrecursion.hoplon.li.call(null, G__17529);
+    var G__17533 = tailrecursion.hoplon.a.call(null, new cljs.core.Keyword(null, "href", "href", 1017115293), "#", new cljs.core.Keyword(null, "click", "click", 1108654330), function(G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513, G__17520, G__17519, G__17521, G__17518, G__17526, G__17530, G__17529, 
+    G__17528) {
       return function() {
         cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.bookmarklet_title, "Post to Lobste.rs");
         cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_to_go_to, "https://lobste.rs/stories/new");
         cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.url_field_name, "url");
         return cljs.core.reset_BANG_.call(null, tailrecursion.hoplon.app_pages._index_DOT_html.title_field_name, "title");
       };
-    }(G__16497, G__16499, G__16498, G__16508, G__16507, G__16496, G__16503, G__16502, G__16505, G__16506, G__16512, G__16513, G__16504, G__16501, G__16500, G__16511, G__16510, G__16509, G__16516, G__16517, G__16515, G__16518, G__16524, G__16523, G__16514, G__16521, G__16520, G__16522, G__16519, G__16527, G__16531, G__16530, G__16529), "lobste.rs");
-    var G__16533 = tailrecursion.hoplon.span.call(null, G__16534, document.createTextNode(" (must be logged in for this to work)"));
-    var G__16532 = tailrecursion.hoplon.li.call(null, G__16533);
-    var G__16528 = tailrecursion.hoplon.ul.call(null, G__16529, G__16532);
-    var G__16526 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full", G__16527, G__16528);
-    var G__16525 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__16526);
-    var G__16495 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "container", G__16496, G__16500, G__16509, G__16514, G__16519, G__16525);
-    return G__16495;
+    }(G__17496, G__17498, G__17497, G__17507, G__17506, G__17495, G__17502, G__17501, G__17504, G__17505, G__17511, G__17512, G__17503, G__17500, G__17499, G__17510, G__17509, G__17508, G__17515, G__17516, G__17514, G__17517, G__17523, G__17522, G__17513, G__17520, G__17519, G__17521, G__17518, G__17526, G__17530, G__17529, G__17528), "lobste.rs");
+    var G__17532 = tailrecursion.hoplon.span.call(null, G__17533, document.createTextNode(" (must be logged in for this to work)"));
+    var G__17531 = tailrecursion.hoplon.li.call(null, G__17532);
+    var G__17527 = tailrecursion.hoplon.ul.call(null, G__17528, G__17531);
+    var G__17525 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "column full", G__17526, G__17527);
+    var G__17524 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix", G__17525);
+    var G__17494 = tailrecursion.hoplon.div.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "container", G__17495, G__17499, G__17508, G__17513, G__17518, G__17524);
+    return G__17494;
   }(), function() {
-    var G__16540 = tailrecursion.hoplon.footer.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix");
-    return G__16540;
+    var G__17539 = tailrecursion.hoplon.footer.call(null, new cljs.core.Keyword(null, "class", "class", 1108647146), "row clearfix");
+    return G__17539;
   }(), function() {
-    var G__16541 = tailrecursion.hoplon.app_pages._index_DOT_html.goog_analytics.call(null, "UA-25564656-1");
-    return G__16541;
+    var G__17540 = tailrecursion.hoplon.app_pages._index_DOT_html.goog_analytics.call(null, "UA-25564656-1");
+    return G__17540;
   }()));
   return tailrecursion.hoplon.init.call(null);
 };
