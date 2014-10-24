@@ -1,0 +1,23 @@
+*.gem
+pkg/
+_site/
+.bundle/
+
+# Generated files:
+out/
+gh-pages/
+site/_site/
+.sass-cache/
+
+# OSX
+.DS_Store
+
+# vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+.boot
+node_modules/
