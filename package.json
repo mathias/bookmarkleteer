@@ -1,0 +1,13 @@
+{
+  "name": "bookmarkleteer",
+  "version": "0.0.0",
+  "description": "bookmarklet generator",
+  "author": "Matt Gauger",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-copy-to": "0.0.12"
+  }
+}
