@@ -124,7 +124,7 @@
                                        [name "get-url" "AJAX GET a URL" cell  {:disabled true}]
                                        [name "post-url" "AJAX POST to a URL" cell  {:disabled true}]
                                        [name "load-js-and-run-function" "Load a JS file and run a function" cell {:disabled true}]]))))
-              (div :class "column half" 
+              (div :class "column half"
                    (text-input-cell "url-to-go-to" url-field-text url-to-go-to)
                    (h2 (text "Fields to send"))
                    (text-input-cell "input-url-field-name" "URL field:" url-field-name)
@@ -147,7 +147,9 @@
                   (textarea :value output-str :rows 7 :cols 45))
              (div :class "column half")
              (p (text "Or, drag this button ")
-                (a :href output-str (text "~{bookmarklet-title}"))
+                (a :href output-str
+                   :class "bookmarklet-button"
+                   (text "~{bookmarklet-title}"))
                 (text " to your bookmarklets bar.")))
         (div :class "row clearfix"
              (div :class "column full"
@@ -155,5 +157,26 @@
                      (text (.-length output-str))))
              (div :class "column full warnings"
                   :do-toggle (cell= (> (.-length output-str) 510))
-                  (text "Warning: Bookmarklets longer than 510 characters may not work in IE6. Then again, if you're targeting IE6, good luck."))))
+                  (text "Warning: Bookmarklets longer than 510 characters may not work in IE6. Then again, if you're targeting IE6, good luck.")))
+        (div :class "row clearfix"
+             (div :class "column full"
+                  (h2 (text "Examples"))
+                  (ul
+                   (li (span
+                        (a :href "#" :click #(do
+                                     (reset! bookmarklet-title "Post to Awesome")
+                                     (reset! url-to-go-to "http://awesome.bendyworks.com/submitlink")
+                                     (reset! url-field-name "u")
+                                     (reset! title-field-name "t"))
+                           "awesome.bendyworks.com")
+                        (text " (Hacker News-style)")))
+                   (li (span
+                        (a :href "#" :click #(do
+                                     (reset! bookmarklet-title "Post to Lobste.rs")
+                                     (reset! url-to-go-to "https://lobste.rs/stories/new")
+                                     (reset! url-field-name "url")
+                                     (reset! title-field-name "title"))
+                           "lobste.rs")
+                        (text " (must be logged in for this to work)")))))))
+   (footer :class "row clearfix")
    (goog-analytics "UA-25564656-1")))
