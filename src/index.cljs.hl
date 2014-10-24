@@ -1,0 +1,159 @@
+(page "index.html"
+;;  (:require [tailrecursion.hoplon :refer [terpol8]])
+      )
+
+;; Reference:
+;; javascript:window.location=%22http://awesome.bendyworks.com/submitlink?u=%22+encodeURIComponent(document.location.toString().trim())+%22&t=%22+encodeURIComponent(document.title.trim())
+;; Parts:
+;;
+;; - `javascript:` tells the browser it isn't a HTTP link
+;; - `window.location=` go to this location
+;; - `%22` - escaped string
+;; - `encodeURIComponent(s.toStrin().trim())` - escape a string to use as a query param to external site
+;;
+
+(defn log [s] (.log js/console s))
+
+(defelem goog-analytics [account-id]
+  (script :type "text/javascript"
+           (text
+            (str "var _gaq = _gaq || []; _gaq.push(['_setAccount', '"
+                 account-id
+                 "']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();"))))
+
+(defc current-bookmarklet-type "go-to-address")
+(defc bookmarklet-title "My Bookmarklet")
+(defc output-str "javascript:")
+(defc url-to-go-to "http://example.com/submitlink")
+(defc url-field-name "url")
+(defc url-field-value "document-location")
+(defc= url-field-value-out
+  (condp = url-field-value
+    "document-location" "encodeURIComponent(document.location.toString().trim())"))
+(defc title-field-name "title")
+(defc title-field-value "document-title")
+(defc= title-field-value-out
+  (condp = title-field-value
+    "document-title" "encodeURIComponent(document.title.trim())"))
+
+(defn encode-for-query [s]
+  (js/encodeURIComponent (.trim (.toString s))))
+
+(defn cond-type [cell a b c]
+  (condp = cell
+    "go-to-address" a
+    "get-url" b
+    "post-url" c))
+
+(defc= url-field-text
+  (cond-type current-bookmarklet-type
+   "URL to go to:"
+   "URL to GET:"
+   "URL to POST to:"))
+
+(defn go-to-url-bookmarklet
+  []
+  (str "javascript:window.location=%22"
+       @url-to-go-to
+       "?"
+       @url-field-name
+       "=%22+"
+       @url-field-value-out
+       "+%22&"
+       @title-field-name
+       "=%22+"
+       @title-field-value-out
+       ))
+
+(defc= input-cells [url-to-go-to
+                    url-field-name
+                    url-field-value-out
+                    title-field-name
+                    title-field-value-out])
+
+(defc= output-str
+  (cond-type current-bookmarklet-type
+             (go-to-url-bookmarklet input-cells) "" ""))
+
+(defn text-input-cell [id label-text cell]
+  (let [setter-fn #(reset! cell (val-id id))]
+    (p
+     (label :name id
+            (text "~{label-text}"))
+     (input :type "text"
+            :name id
+            :id id
+            :value cell
+            :change setter-fn
+            :keyup setter-fn))))
+
+(defn radio-cell [[name id label cell opts]]
+  (log (:checked opts))
+  (p
+   (input :type "radio"
+          :name name
+          :id id
+          :on-change #(reset! current-bookmarklet-type id)
+          :checked (:checked opts)
+          :disabled (:disabled opts))
+   (text "~{label}")))
+
+(html
+  (head
+   (meta :name "viewport" :content "width=device-width, initial-scale=1")
+   (title "bookmarkleteer - Matt Gauger's bookmarklet maker")
+   (link :href "css/normalize.css" :rel "stylesheet")
+   (link :href "css/layout.css" :rel "stylesheet"))
+  (body
+   (div :class "container"
+        (div :class "row clearfix"
+             (h1 (text "bookmarkleteer"))
+             (div :class "column half"
+                  (p (text "This is a simple generator for bookmarklets that take the current URL and either prefill a form, or do an AJAX GET or POST to a remote server.")))
+             (div :class "column half"
+                  (p (text "Examples of such bookmarklets are the Instapaper and Tumblr bookmarklets (although both have gotten much more complex over the years.)"))))
+        (div :class "row clearfix"
+             (fieldset
+              (div :class "column half"
+                   (text-input-cell "bookmarklet-title" "Bookmarklet title:" bookmarklet-title)
+                   (let [name "type-of-bookmarklet"
+                         cell current-bookmarklet-type]
+                     (p
+                      (label :name name (text "Type of bookmarklet"))
+                      (map radio-cell [[name "go-to-address" "Go to address with query params (pre-fill a form)" cell {:checked true}]
+                                       [name "get-url" "AJAX GET a URL" cell  {:disabled true}]
+                                       [name "post-url" "AJAX POST to a URL" cell  {:disabled true}]
+                                       [name "load-js-and-run-function" "Load a JS file and run a function" cell {:disabled true}]]))))
+              (div :class "column half" 
+                   (text-input-cell "url-to-go-to" url-field-text url-to-go-to)
+                   (h2 (text "Fields to send"))
+                   (text-input-cell "input-url-field-name" "URL field:" url-field-name)
+                   (let [name "input-url-field-value"]
+                     (p
+                      (label :name name "URL field value:")
+                      (map radio-cell [[name "document-location" "document.location" url-field-value {:checked true}]])))
+                   (text-input-cell "input-title-field-name" "Title field:" title-field-name)
+                   (let [name "input-title-field-value"]
+                     (p
+                      (label :name name "Title field value:")
+                      (map radio-cell [[name "document-title" "document.title" title-field-value {:checked true}]
+                                       [name "string" "Free text (string)" title-field-value {:disabled true}]]))))))
+        (div :class "row clearfix"
+             (div :class "column full"
+                  (h2 (text "Output:"))))
+        (div :class "row clearfix"
+             (div :class "column half"
+                  (p (text "Create a bookmark and set its location to this:"))
+                  (textarea :value output-str :rows 7 :cols 45))
+             (div :class "column half")
+             (p (text "Or, drag this button ")
+                (a :href output-str (text "~{bookmarklet-title}"))
+                (text " to your bookmarklets bar.")))
+        (div :class "row clearfix"
+             (div :class "column full"
+                  (p (text "Character count: ")
+                     (text (.-length output-str))))
+             (div :class "column full warnings"
+                  :do-toggle (cell= (> (.-length output-str) 510))
+                  (text "Warning: Bookmarklets longer than 510 characters may not work in IE6. Then again, if you're targeting IE6, good luck."))))
+   (goog-analytics "UA-25564656-1")))
