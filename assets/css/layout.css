@@ -66,3 +66,13 @@ body {
 
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
+
+/* Form style hacks */
+label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+p input[type="radio"] {
+  margin-right: 0.5rem;
+}
