@@ -76,3 +76,14 @@ label {
 p input[type="radio"] {
   margin-right: 0.5rem;
 }
+
+.bookmarklet-button {
+  padding: 0.2rem 0.5rem;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+}
+
+footer {
+  margin-bottom: 1rem;
+}
