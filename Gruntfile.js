@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['copyto']);
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-copy-to');
