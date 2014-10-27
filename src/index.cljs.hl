@@ -1,6 +1,4 @@
-(page "index.html"
-;;  (:require [tailrecursion.hoplon :refer [terpol8]])
-      )
+(page "index.html")
 
 ;; Reference:
 ;; javascript:window.location=%22http://awesome.bendyworks.com/submitlink?u=%22+encodeURIComponent(document.location.toString().trim())+%22&t=%22+encodeURIComponent(document.title.trim())
@@ -177,6 +175,12 @@
                                      (reset! url-field-name "url")
                                      (reset! title-field-name "title"))
                            "lobste.rs")
-                        (text " (must be logged in for this to work)")))))))
-   (footer :class "row clearfix")
+                        (text " (must be logged in for this to work)"))))))
+        (footer :class "row clearfix"
+                (div :class "column full"
+                     (text "Bookmarkleteer was written by ")
+                     (a :href "http://blog.mattgauger.com" "Matt Gauger")
+                     (text ". It is open source. Fork it on ")
+                     (a :href "https://github.com/mathias" "Github")
+                     (text "."))))
    (goog-analytics "UA-25564656-1")))
