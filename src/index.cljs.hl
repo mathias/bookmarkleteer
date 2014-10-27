@@ -181,6 +181,6 @@
                      (text "Bookmarkleteer was written by ")
                      (a :href "http://blog.mattgauger.com" "Matt Gauger")
                      (text ". It is open source. Fork it on ")
-                     (a :href "https://github.com/mathias" "Github")
+                     (a :href "https://github.com/mathias/bookmarkleteer" "Github")
                      (text "."))))
    (goog-analytics "UA-25564656-1")))
